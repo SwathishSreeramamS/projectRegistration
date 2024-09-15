@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock title %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Card shadow */
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #007bff; /* Blue color for the greeting */
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .logout-button {
+            padding: 12px 30px;
+            font-size: 18px;
+            background-color: #007bff; /* Blue button */
+            color: #ffffff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        .logout-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px); /* Button hover effect */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .inp{
+            width: 400px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            padding-left: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: red;
+            font-weight: 700;
+        }
+        p{color: black;}
+        h1{
+            font-family: "SUSE", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal; 
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+
+    {% endblock content %}
+</body>
+</html>

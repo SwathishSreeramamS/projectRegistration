@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin-Login Page{% endblock title %}</title>
+    
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h1>Admin - Login</h1>
+        <form action="{% url 'adminlogin' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Enter Username" class="inp" name="username"><br>
+            <input type="password" placeholder="Enter Password" class="inp" name="password"><br>
+            <button  type="submit" class="logout-button">Login</button>
+        </form>
+        <p>Are you not an admin?<a href="{% url 'login' %}"> Login</a></p>
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endblock content %}
+</body>
+</html>

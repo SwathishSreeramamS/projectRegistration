@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}signup Page{% endblock title %}</title>
+    
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h1>User - Registration</h1>
+        <form action="{% url 'signup' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Enter name" class="inp" name="name" ><br>
+            <input type="text" placeholder="Enter Username" class="inp" name="username" ><br>
+            <input type="email" placeholder="Enter Email" class="inp" name="email" ><br>
+            <input type="password" placeholder="Enter Password" class="inp" name="password" ><br>
+            <input type="password" placeholder="Re-enter Password" class="inp"><br>
+            <button  type="submit" class="logout-button">Register</button>
+        </form>
+        <p>Do you have an account?<a href="{% url 'login' %}"> Login</a></p>
+        <p>Are you an admin?<a href="{% url 'adminlogin' %}"> Login</a></p>
+    </div>
+    {% endblock content %}
+</body>
+</html>
